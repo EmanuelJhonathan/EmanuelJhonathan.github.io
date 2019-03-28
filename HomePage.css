@@ -1,0 +1,364 @@
+/* Main Layout */ 
+body {
+    margin: 0;
+    border:solid;
+    border-color: #5a1e82;
+    border-width: 1px;
+    
+}
+
+.container {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 100%;
+    background-color: #5a1e82;
+    background-image: url(Imagens/WikiDogsLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;    
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #5a1e82;
+    height: 20px;
+    color: white;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    flex: 1;
+    background-color: #5a1e82;
+   
+    
+
+}
+
+nav {
+    flex: 1;
+    background-color: #5a1e82;
+    
+}
+
+article {
+    flex: 5;
+    background-color: white;
+    color: black;
+}
+
+/* End of Main Layout */
+
+/* Menu */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: #441972;
+    font-family: 'Noto Sans', sans-serif;
+}
+.menu ul{
+    list-style: none;
+    position: relative;
+}
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color:  #441972;
+    color: #fff;
+}
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color: white;
+    color: #5a1e82;
+}
+.menu ul ul li{
+    float:none;
+    border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a{
+    background-color: #ccc;
+    color: grey;
+}
+label[for="bt_menu"]{
+    padding: 5px;
+    background-color: #441972;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+#bt_menu{
+   display: none; 
+}
+label[for="bt_menu"]{
+    display: none;
+}
+
+/* Menu */
+
+/* Media Querie Ipad Pro */
+
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (orientation: portrait) {
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    header{
+        height: 150px;
+        background-size: 360px 100px;
+            
+    }
+    footer{
+        height: 20px;
+            
+    }
+    nav{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    #mainmenu{
+        
+        background-color: #5a1e82;
+    }
+    label[for="bt_menu"]{
+        padding: 5px;
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+    .menu{
+        font-size: 30px;
+    }
+    
+    
+}
+/* End of Media Querie Ipad Pro */
+
+/* Media Querie J7 Prime */
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 640px)
+  and (orientation: portrait) {
+
+    label[for="bt_menu"]{
+        display: block;
+    }
+    #bt_menu:checked ~ .menu{
+        margin-left: 0;
+    }
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    header{
+        height: 150px;
+        background-size: 360px 100px;
+            
+    }
+    footer{
+        height: 20px;
+            
+    }
+    nav{
+        display: none;
+    }
+    aside{
+        display: none;
+    }
+    #mainmenu{
+        background-color: #5a1e82;
+    }
+    label[for="bt_menu"]{
+        padding: 5px;
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+    }
+    .menu{
+        font-size: 30px;
+    }
+    
+}
+    
+    
+}
+/* End of Media Querie J7 Prime */
+
+/* Conteúdo da Página */
+nav{
+    background-color: #5a1e82;
+}
+aside{
+    background-color: #5a1e82;
+}
+footer{
+    font-family: 'Noto Sans', sans-serif;
+}
+article h1, h2, h3, h4, h5{
+    font-family: 'Noto Sans', sans-serif;
+    color: #5a1e82;
+    padding-left: 5px;
+}
+article p{
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    padding-left: 5px;
+}
+
+
+/* Slide */
+
+
+.slides{
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-top: 50px;
+}
+slider {
+    display: block;
+    width: 600px;
+    height: 300px;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    position: absolute;
+}
+slider > * {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #1f1f1f;
+    animation: slide 12s infinite;
+    overflow: hidden;
+}
+slide:nth-child(1) {
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(Imagens/pelocachorro2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(2) {
+   
+    animation-delay: 2s;
+    background-image: url(Imagens/pelocachorro2);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(3) {
+    
+    animation-delay: 5s;
+    background-image: url(Imagens/Cachorroscuriosidades.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide:nth-child(4) {
+    
+    animation-delay: 8s;
+    background-image: url(Imagens/rottweiler.jpg);
+    background-size: cover;
+    background-position: center;
+}
+slide p{
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 230px;
+    color: white;
+}
+slide p:hover{
+    color: #5a1e82;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%;}
+    5% { left: 0%;}
+    25% { left: 0%;}
+    30% { left: -100%; width: 100%;}
+    30.0001% { left: -100%; width: 0%}
+    100% { left: 100%; width: 0%;}
+}
+
+/* End of Slide */
+
